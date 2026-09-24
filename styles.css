@@ -22,57 +22,45 @@ html {
 .main_calc_screen {
   background-color: mediumpurple;
   max-width: 38rem;
-  height: 20rem;
+  width: 50%;
+  height: 25rem;
   border-radius: 2rem 2rem 0 0;
 }
 
 /* User calculator button intereaction */
 .main_calc_buttons {
+  width: 50%;
+  height: 40rem;
   max-width: 38rem;
   background-color: cadetblue;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-}
-
-.main_calc_numbers {
-  max-width: 38rem;
-  background-color: cadetblue;
-  display: grid;
+  gap: 0.3rem;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  gap: 0.5rem;
-}
-
-.btn_func {
-  background: #1a1a1acb;
-  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.08);
-  color: #ffffff;
-  padding: 1.5rem 2.5rem;
-  align-items: center;
-  border: none;
-  width: 5rem;
-  height: 5rem;
-  border-radius: 100%;
-  margin: 0.3rem;
-}
-
-.btn_numbs_first {
-  background-color: grey;
-  color: #ffffff;
-  padding: 2rem 4rem;
-  border: none;
-  border-radius: 10rem;
 }
 
 .btn_numbs {
+  cursor: pointer;
   background-color: #545454;
   color: #ffffff;
-  padding: 2rem 4rem;
   border: none;
   border-radius: 10rem;
+}
+
+.btn_numbs:hover,
+.btn_numbs:active {
+  background-color: #545454d3;
+}
+
+.fr {
+  background-color: grey;
 }
 
 .op {
   background-color: #ff9500;
+}
+
+.op:hover,
+.op:active {
+  background-color: #ff9500cf;
 }
