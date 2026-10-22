@@ -1,74 +1,53 @@
+const mainButton = document.querySelector(".main_calc_buttons");
 const screen = document.querySelector(".main_calc_screen");
-const btn = document.querySelector(".main_calc_buttons");
+const clear = document.querySelector(".clear");
+// User basic math operators
+const multiply = document.querySelector("#multiplication");
+const divide = document.querySelector("#division");
+const subtract = document.querySelector("#subtraction");
+const add = document.querySelector("#addition");
 
-btn.addEventListener("click", (event) => {
-  let userClick = event.target;
-  // screen.textContent = event;
-  console.log(event);
+// Declaring user value variables
+let firstNum, secondNum, operator;
 
-  switch (userClick.class) {
-    case "clear":
-      screen.textContent = userClick;
-      console.log("cleared");
-      break;
-    case "AC":
-      screen.textContent = userClick;
-      console.log("AC");
-      break;
-    case "%":
-      screen.textContent = userClick;
-      console.log("percent");
-      break;
-    case "/":
-      screen.textContent = userClick;
-      console.log("divide");
-      break;
-    case "seven":
-      screen.textContent = userClick;
-      console.log(7);
-      break;
-    case "eight":
-      screen.textContent = userClick;
-      console.log(8);
-      break;
-    case "nine":
-      screen.textContent = userClick;
-      console.log(9);
-      break;
-    case "x":
-      screen.textContent = userClick;
-      console.log("x");
-      break;
-    case "four":
-      screen.textContent = userClick;
-      console.log(4);
-      break;
-    case "five":
-      screen.textContent = userClick;
-      console.log(5);
-      break;
-    case "six":
-      screen.textContent = userClick;
-      console.log(6);
-      break;
-    case "op":
-      screen.textContent = userClick;
-      console.log("operator");
-      break;
-    case "one":
-      screen.textContent = userClick;
-      console.log(1);
-      break;
-    case "two":
-      screen.textContent = userClick;
-      console.log(2);
-      break;
-    case "three":
-      screen.textContent = userClick;
-      console.log(3);
-      break;
-    default:
-      console.log("not allowed!");
-      break;
-  }
-});
+// User function logic on basic operations
+function product(num1, num2){
+  return num1 * num2;
+}
+
+function userDivides(num1, num2){
+  return num1 / num2;
+}
+
+function userSubtracts(num1, num2){
+  return num1 - num2;
+}
+
+function userAdds(num1, num2){
+  return num1 + num2;
+}
+
+// User operator confirmation
+function operate(num1, operator, num2){
+switch(operator){
+    case "+":
+    userAdds(num1, num2);
+    break;
+  case "-":
+    userSubtracts(num1, num2);
+    break;
+  case "*":
+    product(num1, num2);
+    break;
+  case "/":
+  userDivides(num1, num2);
+    break;
+}}
+
+// User clear function logic
+clear.addEventListener("click", () => {
+  screen.textContent = " ";
+})
+
+
+// How to apply event delegation.
