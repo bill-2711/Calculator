@@ -51,3 +51,6 @@ clear.addEventListener("click", () => {
 
 
 // How to apply event delegation.
+mainButton.addEventListener("click", (event) => {
+  console.log(typeof(Number(event.target.textContent)));
+})
