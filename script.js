@@ -52,5 +52,10 @@ clear.addEventListener("click", () => {
 
 // How to apply event delegation.
 mainButton.addEventListener("click", (event) => {
-  console.log(typeof(Number(event.target.textContent)));
+  screen.textContent = Number(event.target.textContent);
+  const svg = event.target.closest("svg");
+
+if (svg) {
+    screen.innerHTML = svg.outerHTML;
+}
 })
